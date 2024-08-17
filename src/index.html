@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagine! - Art et Surréalisme</title>
+    <!-- <link rel="stylesheet" href="scss/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-backgroundcolor text-black m-0  overflow-x-hidden font-quiroh flex " >
+
+    <header class="w-screen flex justify-between items-center fixed z-30">
+        
+        <div class="menu-toggle ">
+            <div class="menu desktop uppercase bg-backgroundcolor border-t-2 border-b-2 border-solid border-black transition-all duration-300 ease-linear flex justify-center items-center ">menu</div>
+            <div class="menu mobile hidden transition-all duration-300 ease-linear flex justify-center items-center "></div>
+            <div class="menu-border flex justify-between cursor-pointer transition-all duration-300 ease-linear absolute"></div>
+        </div>
+            <a href=""><div class="logo fixed"><img src="images/logo_imagine_turquoise.svg" alt="Logo de l'exposition Imagine!"></div></a>
+            <div class="none"></div>
+        
+    </header>
+    <nav>
+        <ul class="site-nav flex items-center justify-around fixed list-none transition-all duration-400 ease-linear opacity-0 font-light ">
+            <li class="transition-all duration-300 ease-linear text-backgroundcolor opacity-0">
+                <a class="scroll-link block p-4 text-black no-underline" href="#accueil">
+                    <img class="stars-1 absolute opacity-0 transition-all duration-300 ease-linear transition-all duration-300 ease-linear" src="images/pattern/miro_stars_8.svg" alt="Etoile de Miro">
+                    Accueil
+                </a></li>
+            <li class="transition-all duration-300 ease-linear text-backgroundcolor opacity-0">
+                <a class="scroll-link block p-4 text-black no-underline" href="#oeuvres">
+                    <img class="stars-2 absolute opacity-0 transition-all duration-300 ease-linear" src="images/pattern/miro_stars_2.svg" alt="Etoile de Miro">
+                    Oeuvres
+                </a></li>
+            <li class="transition-all duration-300 ease-linear text-backgroundcolor opacity-0">
+                <a class="scroll-link block p-4 text-black no-underline" href="#contactpage">
+                    <img class="stars-3 absolute opacity-0" src="images/pattern/miro_stars_3.svg" alt="Etoile de Miro">
+                    Contact
+                </a></li>
+            <li class="transition-all duration-300 ease-linear text-backgroundcolor opacity-0">
+                <a class="scroll-link block p-4 text-black no-underline" href="#concours">
+                    <img class="stars-4 absolute opacity-0" src="images/pattern/miro_stars_4.svg" alt="Etoile de Miro">
+                    Concours
+                </a></li>
+
+            <p class="copyrights absolute">© 2024 – Musées royaux des Beaux-Arts de Belgique. Tous droits réservés</p>
+        </ul>
+        </nav>
+
+    <!-- cookies -->
+
+    <div id="cookies" class="cookie-banner fixed bg-backgroundcolor border-2 border-solid border-black z-30 flex flex-col justify-between hidden">
+        <div>
+        <h2 class="font-bold">Plongez dans l'Art</h2>
+        <p>Les cookies nous aident à rendre votre visite plus onirique. <br>
+        Prêts à rêver avec nous ?</p>
+    </div>
+        <div class="buttons">
+            <button aria-label="Accepter" class="bg-black text-backgroundcolor" id="oui">Accepter</button>
+            <button aria-label="Refuser" class="bg-black text-backgroundcolor" id="non">Refuser</button>
+        </div>
+    </div>
+
+    <main class="containersite overflow-y-hidden flex">
+
+            <section id="accueil" class="accueil flex items-center justify-center opacity-100 transition-all duration-400 ease-in-out">
+                <article class="accueil_central flex flex-col items-center justify-center z-neg1">
+                    <div class="accueil_logo"><img src="images/logo_imagine_red.svg" alt="logo"></div>
+                    <div class="accueil_text "><img src="images/accueil/accueil_text_v2.svg" alt="Image de texte 'Ceci n'est pas une pipe' reprise de La Trahison des images de Magritte"></div>
+                </article>
+                <article class="accueil_nuages absolute flex z-10 ">
+                    <div class="nuage1 relative "><img src="images/accueil/accueil_nuage1.svg" alt=""></div>
+                    <div class="nuage2 relative"><img src="images/accueil/accueil_nuage2.svg" alt=""></div>
+                    <div class="nuage2mobile hidden relative"><img src="images/accueil/accueil_nuage2_mobile.svg" alt="Nuage"></div>
+                    <div class="nuage3 desktop relative"><img src="images/accueil/accueil_nuage3.svg" alt="Nuage"></div>
+                    <div class="nuage4 desktop relative"><img src="images/accueil/accueil_nuage4.svg" alt="Nuage"></div>
+                </article>
+                <article class="accueil_pattern absolute mix-blend-hard-light ">
+                    <img class="mobile stars-1 hidden" src="images/miro_stars_2.svg" alt="Etoile de Miro">
+                    <img class="mobile stars-2 hidden" src="images/miro_stars_3.svg" alt="Etoile de Miro">
+                    <img class="mobile stars-3 hidden" src="images/miro_stars_4.svg" alt="Etoile de Miro">
+                    <img class="desktop" src="images/accueil/accueil_pattern.svg" alt="Pattern style Miro">
+                </article> 
+                <article class="accueil_oeuvres absolute">
+
+                    <div class="art1 absolute" data-value="2"><img class="rotate-7" src="images/accueil/art1.svg" alt="Image détourée de l'Acrobate de Henri Matisse"></div>
+                    <div class="art2 absolute" data-value="-4"><img src="images/accueil/art2.svg" alt="Image détourée de Le Triomphe du Surréalisme de Max Ernst"></div>
+                    <div class="art3 absolute"data-value="6"><img src="images/accueil/art3.svg" alt="Image détourée d'un tableau de Dora Maar"></div>
+                    <div class="art4 desktop absolute " data-value="-3"><img class="rotate-neg7" src="images/accueil/art4.svg" alt="Image détourée de La Persistance de la mémoire de Salvador Dali"></div>
+                    <div class="art5 desktop absolute"data-value="5"><img class="rotate-9" src="images/accueil/art5.svg" alt="Image détourée de Le Cadeau de Man Ray"></div>
+                    <div class="art6 desktop absolute" data-value="-9"><img src="images/accueil/art6.svg" alt="Image détourée de Objet Indestructible de Man Ray"></div>
+                    <div class="art7 desktop absolute " data-value="-7"><img class="rotate-7" src="images/accueil/art7.svg" alt="Image détourée de La Grande Mutation Yves Tanguy"></div>
+                    <div class="art8 desktop absolute " data-value="4"><img class="rotate-10" src="images/accueil/art8.svg" alt="Image détourée de La Fontaine de Marcel Duchamps"></div>
+                    <div class="art9 desktop absolute " data-value="8"><img class="rotate-neg4" src="images/accueil/art9.svg" alt="Image détourée de Le Téléphone Homard de Salvador Dali"></div>
+                    <div class="art10 desktop absolute " data-value="3"><img class="rotate-11" src="images/accueil/art10.svg" alt="Image détourée de Poème Objet de André Breton"></div>
+                    <div class="art11 desktop absolute " data-value="-5"><img class="rotate-neg9" src="images/accueil/art11.svg" alt="Image détourée de l'Ampoule de Marcel Duchamps"></div>
+                </article>
+                <aside class="scroll absolute font-bold">
+                    <svg width="186" height="16" viewBox="0 0 186 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M185.707 8.70711C186.098 8.31658 186.098 7.68342 185.707 7.29289L179.343 0.928932C178.953 0.538408 178.319 0.538408 177.929 0.928932C177.538 1.31946 177.538 1.95262 177.929 2.34315L183.586 8L177.929 13.6569C177.538 14.0474 177.538 14.6805 177.929 15.0711C178.319 15.4616 178.953 15.4616 179.343 15.0711L185.707 8.70711ZM0 9H185V7H0V9Z" fill="#231F20"/>
+                        </svg>
+                    <p>Keep scrolling</p>
+                </aside>
+                <aside class="scroll_mobile absolute font-bold">
+                    <svg width="37" height="74" viewBox="0 0 37 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.5016 18.0015V32.772C35.5016 42.1617 27.8898 49.7736 18.5001 49.7736C9.11038 49.7736 1.49854 42.1617 1.49854 32.772V18.0015C1.49854 8.61185 9.11038 1 18.5001 1C27.8898 1 35.5016 8.61185 35.5016 18.0015Z" stroke="#231F20" stroke-width="2"/>
+                        <path d="M30.662 59.2828L17.8371 72.0801L5.01514 59.2828" stroke="#231F20" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M18.9614 29.541V43.3884" stroke="#231F20" stroke-width="2"/>
+                        </svg>                        
+                </aside>
+            </section>
+            <section id="presentation" class="presentation bg-backgroundcolor relative opacity-100 transition-all duration-400 ease-in-out">
+                <article class="pres_leftbottom flex flex-col justify-end">
+                    <div class="pres_logo relative"><img src="images/logo_imagine_turquoise.svg" alt="Logo imagine"></div>
+                    <h2 class="font-light">100 Years of International Surrealism</h2>
+                    <p>Les Musées Royaux des Beaux-Arts de Belgique inaugurent IMAGINE!, une exceptionnelle exposition itinérante internationale conçue en collaboration avec le Centre Pompidou (Paris).</p>
+                    <p>Une immersion dans la poésie surréaliste, à travers les thématiques du rêve, du labyrinthe, de la métamorphose, de l’inconnu et du subconscient, emmenée par les grands noms du surréalisme, de Max Ernst à Giorgio de Chirico, en passant par Salvador Dalí, Joan Miró,  Jane Graverol, Dorothea Tanning, Man Ray, Leonor Fini, etc</p>
+                </article>
+                <article class="pres_nuages">
+                <div class="pres_nuage1 absolute"><img src="images/pres/pres_nuage1.svg" alt="Nuage mis en scène"></div>
+                <div class="pres_nuage2 absolute"><img src="images/pres/pres_nuage2.svg" alt="Nuage mis en scène"></div>
+                </article>
+                <article class="pres_pattern absolute opacity-90 mix-blend-hard-light">
+                    <img class="stars-1 hidden" src="images/miro_stars_6.svg" alt="Etoile de Miro">
+                    <img class="desktop" src="images/pres/pres_pattern.svg" alt="Pattern style Miro">
+                </article>
+                <article class="pres_cta desktop absolute flex items-end">
+                    <div class="cta flex items-end flex-col justify-end">
+                        <span class="corde-pancarte-1 bg-darkblue absolute z-neg2"></span>
+                        <span class="corde-pancarte-2 bg-darkblue absolute"></span>
+                        
+                        <a class="button transition-all ease-linear duration-200" href="#concours">
+                        <!-- <img src="images/pres/pres_pancarte.svg" alt=""> -->
+                         <div class="pancarte-rect bg-backgroundcolor border-darkblue border-2 border-solid text-darkblue font-bold rotate-neg3 transition-all ease-in-out duration-300"><p>Participez dès maintenant<br> au concours !</p><svg width="412" height="16" viewBox="0 0 412 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-element" d="M411.546 8.8203C411.937 8.42977 411.937 7.79661 411.546 7.40608L405.182 1.04212C404.792 0.651597 404.159 0.651597 403.768 1.04212C403.378 1.43265 403.378 2.06581 403.768 2.45634L409.425 8.11319L403.768 13.77C403.378 14.1606 403.378 14.7937 403.768 15.1843C404.159 15.5748 404.792 15.5748 405.182 15.1843L411.546 8.8203ZM0.839355 9.11319H410.839V7.11319H0.839355V9.11319Z"/>
+                            </svg>
+                            
+                             </div>
+
+                    </a><p>et tentez de gagner des tickets pour l’exposition !</p></div>
+                    
+                </article>
+                
+            </section>
+            <section id="oeuvres" class="oeuvres flex flex-col z-10 opacity-100 transition-all duration-400 ease-in-out">
+                <article class="oeuvres_titre_filtre flex justify-between items-center">
+                    <h1 class="uppercase font-bold text-darkblue">Oeuvres</h1>
+                    <div class="custom-select-wrapper relative inline-block">
+                    <select aria-label="Choisissez une catégorie" class="custom-select bg-backgroundcolor border-0 cursor-pointer flex font-bold ">
+                        <option value="0" data-filter="*">Par artiste</option>
+                        <option value="1" data-filter="marcelduchamp" >Marcel Duchamp</option>
+                        <option value="2" data-filter="andrebreton">André Breton</option>
+                        <option value="3" data-filter="maxernst">Max Ernst</option>
+                        <option value="4" data-filter="pauleluard">Paul Eluard</option>
+                        <option value="5" data-filter="doramaar">Dora Maar</option>
+                        <option value="6" data-filter="manray">Man Ray</option>
+                        <option value="7" data-filter="joanmiro">Joan Miro</option>
+                        <option value="8" data-filter="salvadordali" >Salvador Dali</option>
+                        <option value="9" data-filter="yvestanguy">Yves Tanguy</option>
+                        <option value="10" data-filter="hansbellmer">Hans Bellmer</option>
+                        <option value="11" data-filter="oscardominguez">Oscar Dominguez</option>
+                        <option value="12" data-filter="hansarp">Hans Arp</option>
+                        <option value="13" data-filter="meretoppenheim">Meret Oppenheim</option>
+                        <option value="14" data-filter="georgeshugnet">Georges Hugnet</option>
+                        <option value="15" data-filter="rolandpenrose">Roland Penrose</option>
+                        <option value="16" data-filter="renemagritte">René Magritte</option>
+                        <option value="17" data-filter="marceljean">Marcel Jean</option>
+                        <option value="18" data-filter="jacquelinebreton">Jacqueline Breton</option>
+                        <option value="19" data-filter="wolfgangpaalen">Wolfgang Paalen</option>
+                        <option value="20" data-filter="nuscheluard">Nusch Eluard</option>
+                        <option value="21" data-filter="pablopicasso">Pablo Picasso</option>
+                        
+                      </select>
+                    </div>
+                </article>
+                <div class="container-oeuvres-img overflow-x-hidden overflow-y-hidden   ">
+                <article class="oeuvres_section_img grid flex  overflow-x-auto overflow-y-hidden ">
+                    
+                        <div class="oeuvres_images_1 grid-item andrebreton">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/andre_breton_poeme_objet.jpg" alt="André Breton - Poème Objet">
+                                <img class="img-filtre " src="images/oeuvre/andre_breton_poeme_objet_filtre.png" alt="André Breton - poème objet">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_2 grid-item manray">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/man_ray_objet_indestructible.jpg" alt="Man Ray - Objet Indestructible">
+                                 <img class="img-filtre" src="images/oeuvre/man_ray_objet_indestructible_filtre.jpg" alt="Man Ray - Objet Indestructible">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_3 grid-item grid-item--width2 hansbellmer">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/henri_matisse_l_acrobate.jpg" alt="Henri Matisse - l'Acrobate">
+                                <img class="img-filtre" src="images/oeuvre/henri_matisse_l_acrobate_filtre.jpg" alt="Henri Matisse - l'Acrobate">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_4 grid-item salvadordali">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/salvador_dali_telephone_homard.jpg" alt="Salvador Dali - Le Téléphone Homard">
+                                <img class="img-filtre" src="images/oeuvre/salvador_dali_telephone_homard_filtre.png" alt="Salvador Dali - Le Téléphone Homard">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_5 grid-item maxernst">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/max_ernst_le_triomphe_du_surrealisme.jpg" alt="Max Ernst - Le Triomphe du Surréalisme">
+                                <img class="img-filtre" src="images/oeuvre/max_ernst_le_triomphe_du_surrealisme_filtre.jpg" alt="Max Ernst - Le Triomphe du Surréalisme">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_6 grid-item manray">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/man_ray_le_cadeau.jpg" alt="Man Ray - Le cadeau">
+                                <img class="img-filtre" src="images/oeuvre/man_ray_le_cadeau_filtre.jpg" alt="Man Ray - Le cadeau">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_7 grid-item grid-item--width2 doramaar">
+                            <a href="">
+                                 
+                                 <img class="img-ss-filtre desktop" src="images/oeuvre/dorothea_tanning_el_juego_de_la_flor_magica.jpg" alt="Dorothea Tanning - Le jeu de la fleur magique">
+                                <img class="img-filtre" src="images/oeuvre/dorothea_tanning_el_juego_de_la_flor_magica_filtre.png" alt="Dorothea Tanning - Le jeu de la fleur magique">
+                                 
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_8 grid-item marcelduchamp">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/marcel_duchamp_ampoule.jpg" alt="Marcel Duchamps - Ampoule">
+                                <img class="img-filtre" src="images/oeuvre/marcel_duchamp_ampoule_filtre.jpg" alt="Marcel Duchamps - Ampoule">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_9 grid-item marcelduchamp">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/marcel_duchamp_fountain.jpg" alt="Marcel Duchamp - La fontaine">
+                                <img class="img-filtre" src="images/oeuvre/marcel_duchamp_fountain_filtre.jpg" alt="Marcel Duchamp - La fontaine">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_10 grid-item jacquelinebreton">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/leonora_carrington_the_red_deeps.jpg" alt="Leonora Carrington - The red deeps">
+                                <img class="img-filtre" src="images/oeuvre/leonora_carrington_the_red_deeps_filter.jpg" alt="Leonora Carrington - The red deeps">
+                               
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_11 grid-item grid-item--width2 doramaar">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/pablo_picasso_dora_maar.jpg" alt="Dora Maar">
+                                <img class="img-filtre" src="images/oeuvre/pablo_picasso_dora_maar_filtre.jpg" alt="Dora Maar">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_12 grid-item renemagritte">
+                            <a href="">
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/rene_magritte_l_evasion.jpg" alt="René Magritte - L'évasion">
+                                <img class="img-filtre" src="images/oeuvre/rene_magritte_l_evasion_filtre.jpg" alt="René Magritte - L'évasion">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_13 grid-item grid-item--width2 salvadordali">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/salvador_dali_la_persistance_de_la_memoire.jpg" alt="Salvador Dali - La Persistance de la mémoire">
+                                <img class="img-filtre" src="images/oeuvre/salvador_dali_la_persistance_de_la_memoire_filtre.png" alt="Salvador Dali - La Persistance de la mémoire">
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_14 grid-item yvestanguy">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/jane_graverol_la_grand_transparente.jpg" alt="Jane Graverol - La grande Transparente">
+                                <img class="img-filtre" src="images/oeuvre/jane_graverol_la_grand_transparente_filtre.jpg" alt="Jane Graverol - La grande Transparente">
+                                
+                            </a>
+                        </div>
+                        <div class="oeuvres_images_15 grid-item yvestanguy">
+                            <a href=""> 
+                                <img class="img-ss-filtre desktop" src="images/oeuvre/yves_tanguy_the_great_mutation.jpg" alt="Yves Tanguy - La Grande Mutation">
+                                <img class="img-filtre" src="images/oeuvre/yves_tanguy_the_great_mutation_filtre.png" alt="Yves Tanguy - La Grande Mutation">
+                            </a>
+                        </div>
+                    
+                    
+                </article>
+            </div>
+                <article class="scroll-container desktop flex items-center justify-end">
+                <aside class="scroll flex font-bold flex-wrap">
+                    <svg width="186" height="16" viewBox="0 0 186 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M185.707 8.70711C186.098 8.31658 186.098 7.68342 185.707 7.29289L179.343 0.928932C178.953 0.538408 178.319 0.538408 177.929 0.928932C177.538 1.31946 177.538 1.95262 177.929 2.34315L183.586 8L177.929 13.6569C177.538 14.0474 177.538 14.6805 177.929 15.0711C178.319 15.4616 178.953 15.4616 179.343 15.0711L185.707 8.70711ZM0 9H185V7H0V9Z" fill="#231F20"/>
+                        </svg>
+                    <p class="relative">Keep scrolling</p>
+                </aside>
+                </article>
+            <article class="oeuvres-pattern absolute z-neg2">
+                    <img class="stars-1 rotate-neg18 relative" src="images/pattern/miro_stars_5.svg" alt="Etoiles style Joan Miro">
+                    <img class="stars-2 relative" src="images/pattern/miro_stars_2.svg" alt="Etoiles style Joan Miro">
+                    <img class="stars-3 relative" src="images/pattern/miro_stars_3.svg" alt="Etoiles style Joan Miro">
+                
+            </article>
+            </section>
+            <section id="contactpage" class="contactpage flex flex-col items-center justify-center opacity-100 transition-all duration-400 ease-in-out">
+                <article class="contact_pattern absolute">
+                    <img class="stars-5 absolute rotate-neg5" src="images/pattern/miro_stars_5.svg" alt="Etoile style Joan Miro">
+                    <img class="stars-3 absolute rotate-neg2" src="images/pattern/miro_stars_3.svg" alt="Etoile style Joan Miro">
+                </article>
+                <article class="contact">
+                    <h1 class="font-bold m-0">Contacts</h1>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-loc.svg" alt="Icône localisation">Rue de la Régence 3, 1000 Bruxelles</div>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-mail.svg" alt="Icône adresse mail">info@fine-arts-museum.be</div>
+                    <div class="contact-display flex items-center "><img src="images/contact/contact-icons-phone.svg" alt="Icône numéro de téléphone">+32 (0)2 508 32 11</div>
+                </article>
+                <article class="reseaux flex justify-end">
+                    <div>
+                    <h1 class="font-bold">Réseaux sociaux</h1>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-insta.svg" alt="Icône instagram">@fineartsbelgium</div>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-fb.svg" alt="Icône Facebook">Fine Arts Belgium</div>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-ytb.svg" alt="Icône Youtube">@FineArtsMuseumsBe</div>
+                    <div class="contact-display flex items-center"><img src="images/contact/contact-icons-twitter.svg" alt="Icône Twitter ou X">@FineArtsBelgium</div>
+                    </div>
+                </article>
+
+                <a class="relative text no-underline z-20" href="#concours"><button aria-label="Call to Action inscription concours" class="oeuvres_cta flex items-center justify-center cursor-pointer uppercase bg-backgroundcolor font-bold relative border-2 border-black border-solid transition-all duration-200 ease-linear"><p>N’oublie pas de t’inscrire au concours ! </p>
+                    <svg class="mobile hidden" width="295" height="16" viewBox="0 0 295 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M294.707 8.70713C295.098 8.31661 295.098 7.68344 294.707 7.29292L288.343 0.928957C287.953 0.538433 287.319 0.538433 286.929 0.928957C286.538 1.31948 286.538 1.95265 286.929 2.34317L292.586 8.00003L286.929 13.6569C286.538 14.0474 286.538 14.6806 286.929 15.0711C287.319 15.4616 287.953 15.4616 288.343 15.0711L294.707 8.70713ZM-8.74228e-08 9L294 9.00003L294 7.00003L8.74228e-08 7L-8.74228e-08 9Z" fill="#231F20"/>
+                        </svg>
+                        
+                    
+                    <svg class="desktop" width="49" height="16" viewBox="0 0 49 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.7071 8.70711C49.0976 8.31658 49.0976 7.68342 48.7071 7.29289L42.3431 0.928932C41.9526 0.538408 41.3195 0.538408 40.9289 0.928932C40.5384 1.31946 40.5384 1.95262 40.9289 2.34315L46.5858 8L40.9289 13.6569C40.5384 14.0474 40.5384 14.6805 40.9289 15.0711C41.3195 15.4616 41.9526 15.4616 42.3431 15.0711L48.7071 8.70711ZM0 9H48V7H0V9Z" />
+                    </svg>
+                    </button>
+                </a>
+            </section>
+            <section id="concours" class="concours flex opacity-100 transition-all duration-400 ease-in-out z-10 items-center justify-center">
+
+                <article class="concours_nuages absolute z-neg1">
+                    <div class="nuage1 absolute">
+                        <img src="images/concours/concours_nuage1.svg" alt="Nuage">
+                    </div>
+                    <div class="nuage2 absolute">
+                        <img src="images/concours/concours_nuage2.svg" alt="Nuage">
+                    </div>
+                    <div class="nuage3 absolute">
+                        <img src="images/concours/concours_nuage3.svg" alt="Nuage">
+                    </div>
+
+                </article>                
+            
+
+                <article class="concours_pattern absolute flex items-center justify-center z-neg3">
+                    <img class="motif-miro-1 hidden mobile" src="images/concours/concours_miro_pattern1.svg" alt="Motif miro">
+                    <img class="motif-miro-2 hidden mobile" src="images/concours/concours_miro_pattern2.svg" alt="Motif miro">
+                    <img class="desktop" src="images/concours/concours_pattern1.svg" alt="Pattern style Miro">
+                </article>
+
+                
+                <div class="container_form">
+                    <p class="desktop font-semibold items-center justify-center flex">Intéressé(e) ? Tente de gagner des billets !</p>
+                    <p class="mobile hidden font-semibold items-center justify-center flex">Intéressé(e) ? <br> Tente de gagner des billets !</p>
+                    <div class="form-border absolute border-2 border-solid border-black z-neg2"></div>
+                    <form class="flex flex-col justify-center items-center z-20" id="myForm" action="process_form.php" method="post">
+                        <div class="div-names flex justify-between">
+                        <input class="bg-backgroundcolor border-2 border-solid border-black" type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                        <input class="bg-backgroundcolor border-2 border-solid border-black" type="text" name="nom" id="nom" placeholder="Nom" required>
+                    </div>
+                        <input class="bg-backgroundcolor border-2 border-solid border-black" type="mail" name="mail" id="mail" placeholder="Adresse mail" required>
+                        <input class="bg-backgroundcolor border-2 border-solid border-black" type="mail" name="mail" id="conf_mail" placeholder="Confirmation adresse mail" required>
+                    <div class="submitbtn flex justify-end">
+                        <button aria-label="Envoyer Formulaire" class="bg-backgroundcolor border-black border-solid border-2 cursor-pointer flex justify-center items-center transition-all duration-200 ease-linear" type="submit" id="submit">
+                            <svg width="74" height="16" viewBox="0 0 74 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M73.7071 8.70711C74.0976 8.31658 74.0976 7.68342 73.7071 7.29289L67.3431 0.928932C66.9526 0.538408 66.3195 0.538408 65.9289 0.928932C65.5384 1.31946 65.5384 1.95262 65.9289 2.34315L71.5858 8L65.9289 13.6569C65.5384 14.0474 65.5384 14.6805 65.9289 15.0711C66.3195 15.4616 66.9526 15.4616 67.3431 15.0711L73.7071 8.70711ZM0 9H73V7H0V9Z" />
+                            </svg>
+                            </button>
+                    </div>
+                    </form>
+                    <div id="responseMessage"></div>
+                </div>
+
+            </section>
+    </main>
+
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/script_gsap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

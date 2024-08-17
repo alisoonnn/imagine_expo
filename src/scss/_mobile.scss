@@ -1,0 +1,673 @@
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 500vh;
+        overflow-x: hidden;
+        // overflow-y: hidden;
+    }
+  
+   .containersite {
+    width: 100vw;
+    height: 500vh;
+    flex-direction: column;
+    overflow-y: scroll;
+  
+   }
+  
+   .presentation, 
+    .oeuvres, 
+    .concours{
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: none;
+    }
+  
+   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    
+  
+    .logo {
+      display: none;
+    }
+  
+    .menu {
+      aspect-ratio: 1/1;
+      width: 7vh;
+      display: block;
+      position: absolute;
+      top: 1vh;
+      border: 0;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 100px;
+      right: 1.5vh;
+    }
+  
+    .menu.desktop {
+      display: none;
+    }
+  
+    .menu.mobile {
+      display: block;
+      border: 2px solid $black;
+    }
+  
+  
+    .menu-border {
+      top: 4.5vh;
+      right: 3vh;
+      width: 4vh;
+      height: 2px;
+      background-color: $black;
+      transition: all 0.3s ease;
+      position: absolute;
+    }
+  
+    .menu-border::before,
+    .menu-border::after{
+      content: '';
+      position: absolute;
+      background-color: $black;
+      width: 4vh;
+      height: 2px;
+      
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+  
+    .menu-border::after {
+      top: 1.2vh;
+    }
+    .menu-border::before {
+      top: -1.2vh;
+    }
+  
+    .menu-border.open {
+      background-color: transparent;
+      z-index: 6;
+    }
+  
+    .menu-border.open:before {
+      transform: translateY(1.2vh) rotate(45deg);
+    }
+    .menu-border.open:after {
+      transform: translateY(-1.2vh) rotate(-45deg);
+    }
+  
+  }
+  
+  
+  .site-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 0;
+    transition: all 0.4s ease;
+    font-size: 2.1rem;
+    font-weight: 300;
+    opacity: 0;
+    z-index: -2;
+  
+  
+  
+    li {
+        margin: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: $black;
+    }
+  
+    a {
+        display: block;
+        padding: 1em;
+        color: $black;
+        text-decoration: none;
+    }
+  
+    p {
+        font-size: 1rem;
+        position: absolute;
+        bottom: 1vh;
+    }
+  
+    .stars-1 {
+      opacity: 1;
+      height: 10vh;
+      top: 24vh;
+      left: 19vw;
+    }
+  
+    .stars-2 {
+      opacity: 1;
+      height: 9vh;
+      top: 37vh;
+      left: 66vw;
+    }
+  
+    .stars-3 {
+      opacity: 1;
+      height: 9vh;
+      top: 51vh;
+      left: 14vw;
+    }
+  
+    .stars-4 {
+      height: 10vh;
+      top: 62vh;
+      left: 63vw;
+      opacity: 1;
+    }
+  }
+  
+  .site-nav.open {
+  display: flex;
+  background-color: $backgroundcolor;
+  z-index: 5;
+  opacity: 1;
+  left: 0;
+  transition: all 0.3s ease;
+  
+  li {
+      opacity: 1;
+  }
+  }
+  
+  // ACCUEIL
+  
+  .accueil {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: $backgroundcolor;
+   }
+  
+   .scroll {
+    display: none;
+   }
+  
+   .scroll_mobile{
+    height: 10vh;
+    width: 20vw;
+    position: fixed;
+    top: 89.5vh;
+    left: 47vw; 
+    z-index: 10;
+   }
+  
+   .accueil_central {
+    width: 50vw;
+  
+    .accueil_logo {
+      width: 55vw;
+    }
+  
+    .accueil_text {
+      width: 90vw;
+      margin-top: 1vh;
+    }
+   }
+  
+   .accueil_pattern {
+  
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -3;
+  
+    .desktop {
+      display: none;
+    }
+  
+    .mobile {
+      display: block;
+      width: 25vw;
+    }
+  
+    .stars-1 {
+      position: relative;
+      left: 10vw;
+      top: 33vh;
+    }
+  
+    .stars-2 {
+      position: relative;
+      left: 45vw;
+      top: 45vh;
+      width: 20vw;
+      transform: rotate(169deg);
+    }
+  
+    .stars-3 {
+      position: relative;
+      left: 53vw;
+      top: 60vh;
+    }
+    
+  
+   }
+  
+   .accueil_oeuvres {
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+    position: absolute;
+  
+    .desktop {
+      display: none;
+    }
+  
+    div {
+      height: 15px;
+      width: 2vh;
+    }
+  
+    .art1 {
+      width: 21vw;
+      left: 10vw;
+      top: 58vh;
+  
+      img{
+      transform: rotate(7deg);
+      }
+    }
+  
+    .art2 {
+      width: 38vw;
+      left: 15vw;
+      top: 71vh;
+  
+      img{
+       transform: rotate(-3deg);  
+      }
+     
+    }
+    .art3 {
+      width: 27vw;
+      left: 55vw;
+      top: 16vh;
+  
+      img{
+        transform: rotate(-15deg);
+      }
+      
+    }
+   }
+  
+   .accueil_nuages {
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    
+  
+    .desktop {
+      display: none;
+    }
+  
+    .nuage1 {
+      top: -25vh;
+      left: 7vw;
+      width: 56vw;
+      filter: drop-shadow(-4px 8px 15px rgba(0, 0, 0, 0.15));
+    }
+  
+    .nuage2 {
+      display: none;
+    }
+  
+    .nuage2mobile {
+      display: block;
+      top: -7vh;
+      left: 0vw;
+      width: 56vw;
+      filter: drop-shadow(-4px 8px 15px rgba(0, 0, 0, 0.15));
+    }
+  
+   }
+  
+  //  presentation
+  
+  .presentation{
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: -1;
+  
+    .desktop {
+      display: none;
+    }
+  
+    .pres_leftbottom {
+  
+      padding-bottom: 10vh;
+  
+      .pres_logo {
+        width: 70vw;
+        margin-bottom: 1vh;
+      }
+  
+      h2 {
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+        margin-bottom: 1vh;
+      } 
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 1vh;
+      }
+    }
+  
+    .pres_nuages {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      
+      .pres_nuage1 {
+        left: -6px;
+        top: 1vh;
+        width: 52vw;
+      filter: drop-shadow(-4px 8px 15px rgba(0, 0, 0, 0.15));
+      }
+  
+      .pres_nuage2 {
+      left: 198px;
+      top: 1vh;
+      width: 34vw;
+      filter: drop-shadow(-4px 8px 15px rgba(0, 0, 0, 0.15));
+      }
+    }
+  
+    .pres_pattern {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: -1;
+      
+      .stars-1 {
+        display: block;
+        position: relative;
+        width: 15vh;
+        left: 4vh;
+        top: 21.5vh;
+      }
+  
+    }
+    
+  
+  
+  }
+  
+  // oeuvres 
+  
+  .oeuvres {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 1vh;
+  
+    .desktop {
+      display: none;
+    }
+  
+    .oeuvres_titre_filtre {
+  
+      margin-top: 5vh;
+      align-items: baseline;
+  
+      h1 {
+        font-size: 2.7rem;
+      }
+  
+      select {
+        width: 27vw;
+      }
+    }
+  
+    .container-oeuvres-img {
+      overflow-y: hidden;
+      
+    }
+  
+  }
+  
+  
+  .contactpage {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  article {
+    width: 70vw;
+    padding-top: 0;
+  
+    div {
+      margin-top: 1vh;
+    }
+  
+    img {
+      width: 7vw;
+      margin-right: 3vw;
+    }
+  }
+  
+  .contact_display {
+    display: flex;
+    align-items: start;
+    position: relative;
+    // margin-top: 10vh;
+  }
+  
+  .contact {
+    margin-right: 10vw;
+  
+    h1 {
+      font-size: 2.9rem;
+    }
+  }
+  
+  .reseaux {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8vh;
+  
+    div {
+      width: 65vw;
+    }
+  
+    h1 {
+      line-height: 2.8rem;
+      font-size: 2.9rem;
+      margin-bottom: 2.5vh;
+    }
+  }
+  
+  a {
+    position: relative;
+    top: 8vh;
+    
+    button {
+      width: 85vw;
+      height: 12vh;
+      text-align: left;
+      padding: 1vh;
+      flex-direction: column;
+  
+    p {
+      width: 80vw;
+      padding-left: 3vw;
+      font-size: 1.2rem;
+    }
+  
+      .desktop {
+        display: none;
+      }
+  
+      .mobile {
+        display: flex;
+      }
+    }
+  }
+  
+  .contact_pattern {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 5vh;
+  
+    .stars-5 {
+      position: relative;
+      width: 10vh;
+      top: -3vh;
+      left: 1vw;
+    }
+  
+    .stars-3 {
+      position: relative;
+      width: 10vh;
+      top: 24vh;
+      left: 10vw;
+    }
+  }
+  
+  }
+  
+  // concours
+  
+  .concours {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+  
+    .concours_nuages {
+      display: none;
+    }
+  
+    .desktop {
+      display: none;
+    }
+  
+    .concours_pattern {
+      height: 100vh;
+      width: 100vw;
+  
+      .mobile {
+        display: block;
+        position: relative;
+        width: 15vw;
+        top: 0;
+        left: 0;
+      }
+  
+      .motif-miro-1 {
+        width: 60vw;
+        top: -30vh;
+        left: 30vw;
+      }
+      .motif-miro-2 {
+        width: 60vw;
+        top: 29vh;
+        left: -43vw;
+      }
+  
+    }
+  
+  
+  
+    .container_form {
+      height: 80vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5vw;
+  
+      .mobile {
+        display: block;
+        font-size: 1.8rem;
+      }
+  
+      
+  
+      form{
+  
+        width: 88vw;
+        margin-top: 2vh;
+        
+        .div-names{
+          flex-wrap: wrap;
+  
+          
+        }
+  
+        input {
+          width: 88vw;
+          height: 6vh;
+          padding: 1vh;
+          margin-top: 1vh;
+          font-size: 1.2rem;
+        }
+  
+        .submitbtn {
+          height: 5vh;
+          margin-top: 2vh;
+          width: 88vw;
+  
+          button {
+            width: 33vw;
+            height: 6vh;
+  
+            svg {
+              fill: $black;
+            }
+          }
+        }
+  
+        
+      }
+    }
+  
+  }
+  
+  }
