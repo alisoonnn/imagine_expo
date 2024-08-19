@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const uglify = require('gulp-uglify');
 const clean = require('gulp-clean');
+const htmlmin = require('gulp-htmlmin');
 
 
 // Tâche pour nettoyer le dossier de destination
@@ -71,6 +72,21 @@ function watchFiles() {
   gulp.watch('src/*.html', replaceText);
 }
 
+// Tâche pour minimiser le HTML
+function minifyHTML() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true
+    }))
+    .pipe(gulp.dest('dist'));
+}
+
+
 // Tâche par défaut (exécutée en tapant simplement 'gulp' dans le terminal)
 exports.default = gulp.series(
   cleanDist,
@@ -79,5 +95,6 @@ exports.default = gulp.series(
   images,
   minifyJS,
   convertToWebp,
-  watchFiles
+  watchFiles,
+  minifyHTML
 );
